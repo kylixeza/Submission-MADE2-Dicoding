@@ -8,15 +8,6 @@ plugins {
 
 apply from: '../shared_dependencies.gradle'
 
-/*
-leakCanary {
-    // LeakCanary needs to know which variants have obfuscation turned on
-    filterObfuscatedVariants { variant ->
-        variant.name == "debug"
-    }
-}
-*/
-
 androidExtensions{
     experimental = true
 }
@@ -38,13 +29,6 @@ android {
     buildFeatures {
         viewBinding = true
     }
-
-    /*buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }*/
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8

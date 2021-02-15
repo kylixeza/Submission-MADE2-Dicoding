@@ -10,35 +10,32 @@ class SplashActivity : AppCompatActivity() {
     companion object {
         private const val TIME_FOR_SPLASH = 3000L
         private const val VERSION = BuildConfig.VERSION_NAME
-
-       /* private class SplashHandler(activity: SplashActivity): Handler(Looper.getMainLooper()) {
-            private val weakReference: WeakReference<SplashActivity> = WeakReference(activity)
-
-            override fun handleMessage(msg: Message) {
-                //super.handleMessage(msg)
-                val activity = weakReference.get()
-                Intent(activity, MainActivity::class.java)
-                activity?.splashBinding?.progress?.stop()
-            }
-        }*/
     }
-    private lateinit var splashBinding: ActivitySplashBinding
+
+    private var _splashBinding: ActivitySplashBinding? = null
+    private val splashBinding get() = _splashBinding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        splashBinding = ActivitySplashBinding.inflate(layoutInflater)
+        _splashBinding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(splashBinding.root)
 
-        splashBinding.buildVersion.text = VERSION
+        val splashHandler = Handler(mainLooper)
 
-        val handler = Handler(mainLooper)
+        splashBinding.buildVersion.text = VERSION
         splashBinding.progress.start()
         splashBinding.progress.loadingColor = R.color.colorAccent
-        handler.postDelayed({
+
+        splashHandler.postDelayed({
+            splashBinding.progress.stop()
             val intent = Intent(this@SplashActivity, MainActivity::class.java)
             startActivity(intent)
-            splashBinding.progress.stop()
             finish()
         }, TIME_FOR_SPLASH)
+    }
+
+    override fun onDestroy() {
+        _splashBinding = null
+        super.onDestroy()
     }
 }
