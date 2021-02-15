@@ -18,7 +18,6 @@ import com.kylix.submissionmade2.databinding.FavoriteFragmentBinding
 import com.kylix.submissionmade2.databinding.FollowFragmentBinding
 import com.kylix.submissionmade2.databinding.HomeFragmentBinding
 import com.kylix.submissionmade2.util.ShowState
-import leakcanary.AppWatcher
 import org.koin.android.ext.android.getKoin
 import org.koin.android.viewmodel.ViewModelParameter
 import org.koin.android.viewmodel.koin.getViewModel
@@ -47,13 +46,10 @@ class FavoriteFragment : Fragment(), ShowState {
         savedInstanceState: Bundle?
     ): View {
         val actionBar = (activity as AppCompatActivity).supportActionBar
+        loadKoinModules(favoriteModule)
         actionBar?.title = getString(R.string.favorite)
         _favoriteBinding = FavoriteFragmentBinding.inflate(layoutInflater, container, false)
-        val view = favoriteBinding.root
-        loadKoinModules(favoriteModule)
-
-        AppWatcher.config = AppWatcher.config.copy(watchFragments = false)
-        return view
+        return favoriteBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
