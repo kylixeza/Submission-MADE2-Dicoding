@@ -30,7 +30,7 @@
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
             app:navGraph="@navigation/user_navigation"
             app:layout_constraintBottom_toTopOf="@id/bottomNavView"
-            tools:ignore="NestedWeights" />
+            tools:ignore="FragmentTagUsage,NestedWeights" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavView"
