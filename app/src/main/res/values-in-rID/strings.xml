@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="followers">Pengikut</string>
+    <string name="following">Mengikuti</string>
+    <string name="search_hint">Masukkan Nama Pengguna Github..</string>
+    <string name="not_found">Pengguna Tidak Ditemukan</string>
+    <string name="not_have">%1$s Tidak Memiliki %2$s</string>
+    <string name="home">Beranda</string>
+    <string name="settings">Pengaturan</string>
+    <string name="language">Bahasa</string>
+    <string name="change_language">Ubah Bahasa</string>
+    <string name="favorite">Favorit</string>
+    <string name="favorite_add">%s Ditambahkan ke Favorite</string>
+    <string name="favorite_remove">%s Dihapus dari Favorite</string>
+    <string name="location_not_found">Lokasi Tidak Ditemukan :(</string>
+</resources>

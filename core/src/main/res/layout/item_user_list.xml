@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="data"
+            type="com.kylix.core.domain.model.User" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UnusedAttribute">
+
+        <ImageView
+            android:id="@+id/list_avatarUrl"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:transitionName="imageView_trans"
+            app:avatar='@{data.avatarUrl ?? "" }'
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/ic_user" />
+
+        <TextView
+            android:id="@+id/list_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:maxLines="1"
+            android:text="@{data.login}"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            app:layout_constraintStart_toEndOf="@+id/list_avatarUrl"
+            app:layout_constraintTop_toTopOf="@id/list_avatarUrl"
+            tools:text="@string/exp_login" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="@{data.url}"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/list_login"
+            app:layout_constraintTop_toBottomOf="@id/list_login"
+            tools:text="@string/exp_url"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

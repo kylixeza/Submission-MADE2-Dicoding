@@ -1,0 +1,46 @@
+dependencies {
+
+    implementation "androidx.core:core-ktx:$core_version"
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "com.google.android.material:material:$material_version"
+    implementation "androidx.preference:preference-ktx:$preference_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.preference:preference-ktx:1.1.1'
+    testImplementation "junit:junit:$junit_version"
+    androidTestImplementation "androidx.test.ext:junit:$test_junit_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$test_espresso_version"
+    implementation "androidx.multidex:multidex:$multidex_version"
+
+    //UI
+    implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
+    implementation "androidx.recyclerview:recyclerview:$recylcerview_version"
+    implementation "androidx.viewpager2:viewpager2:$viewpager2_version"
+    implementation "androidx.cardview:cardview:$cardview_version"
+    //noinspection GradleCompatible
+    implementation "com.android.support:appcompat-v7:$appcompat_v7_version"
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    kapt("com.github.bumptech.glide:compiler:$glide_version")
+
+    //Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
+
+    //Lifecycle
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+
+    //Dependency Injection
+    implementation "org.koin:koin-core:$koin_version"
+    implementation "org.koin:koin-android:$koin_version"
+    implementation "org.koin:koin-android-viewmodel:$koin_version"
+
+    //LeakCanary
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.4'
+
+    //Custom UI
+    implementation "com.github.Shashank02051997:FancyToast-Android:$fancy_toast_version"
+    implementation "com.victor:lib:$victor_rotate_loading_version"
+}

@@ -1,0 +1,75 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        kotlin_version = "1.4.30"
+        core_version = "1.3.2"
+        appcompat_version = "1.2.0"
+        material_version = "1.2.1"
+        preference_version = "1.1.1"
+        junit_version = "4.13.1"
+        test_junit_version = "1.1.2"
+        test_espresso_version = "3.3.0"
+        multidex_version = "2.0.1"
+
+        //UI
+        constraint_layout_version = "2.0.4"
+        recylcerview_version = "1.1.0"
+        viewpager2_version = "1.0.0"
+        cardview_version = "1.0.0"
+        material_beta_version = "1.3.0-beta01"
+        appcompat_v7_version = "27.1.1"
+        glide_version = "4.11.0"
+
+        //Navigation
+        navigation_version = "2.3.2"
+
+        //Lifecycle
+        lifecycle_version = "2.2.0"
+
+        //Network
+        retrofit_version = "2.9.0"
+        okhttp_version = "4.9.0"
+        gson_version = "2.8.6"
+
+        //Database
+        room_version = "2.2.6"
+
+        //Coroutine Flow
+        coroutine_version = "1.4.2"
+
+        //Dependency Injection
+        koin_version = "2.1.6"
+
+        //Database Encryption
+        sqlciper_version = "4.4.0"
+        sqlite_version = "2.1.0"
+
+        //Custom UI
+        fancy_toast_version = "0.1.8"
+        victor_rotate_loading_version = "1.0.4"
+    }
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.1.2"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigation_version"
+        classpath 'com.squareup.leakcanary:leakcanary-deobfuscation-gradle-plugin:2.4'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven{url "https://jitpack.io"}
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
