@@ -19,7 +19,6 @@ import com.kylix.submissionmade2.databinding.FavoriteFragmentBinding
 import com.kylix.submissionmade2.databinding.FollowFragmentBinding
 import com.kylix.submissionmade2.databinding.HomeFragmentBinding
 import com.kylix.submissionmade2.util.ShowState
-import leakcanary.AppWatcher
 import org.koin.android.ext.android.getKoin
 import org.koin.android.viewmodel.ViewModelParameter
 import org.koin.android.viewmodel.koin.getViewModel
@@ -49,9 +48,7 @@ class HomeFragment : Fragment(), ShowState {
         val actionBar = (activity as AppCompatActivity).supportActionBar
         actionBar?.title = getString(R.string.app_name)
         _homeBinding = HomeFragmentBinding.inflate(layoutInflater, container, false)
-        val view = homeBinding.root
-        AppWatcher.config = AppWatcher.config.copy(watchFragments = false)
-        return view
+        return homeBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
