@@ -104,7 +104,7 @@ class HomeFragment : Fragment(), ShowState {
     ) {
         homeFragmentBinding?.apply {
             errLayout.mainNotFound.visibility = View.GONE
-            progress.stop()
+            progress.visibility = View.GONE
             recyclerHome.visibility = View.VISIBLE
         }
     }
@@ -116,8 +116,7 @@ class HomeFragment : Fragment(), ShowState {
     ) {
         homeFragmentBinding?.apply {
             errLayout.mainNotFound.visibility = View.GONE
-            progress.start()
-            progress.loadingColor = R.color.colorAccent
+            progress.visibility = View.VISIBLE
             recyclerHome.visibility = View.GONE
         }
     }
@@ -139,7 +138,7 @@ class HomeFragment : Fragment(), ShowState {
                     ivSearch.setImageResource(R.drawable.ic_search_off)
                 }
             }
-            progress.stop()
+            progress.visibility = View.GONE
             recyclerHome.visibility = View.GONE
         }
     }

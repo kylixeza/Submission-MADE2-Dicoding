@@ -28,13 +28,16 @@
         app:layout_constraintTop_toBottomOf="@id/githubMark"
         android:contentDescription="@string/app_name" />
 
-    <com.victor.loading.rotate.RotateLoading
+    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/progress"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/githubText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_fileName="loading.json"/>
 
     <TextView
         android:id="@+id/build_version"

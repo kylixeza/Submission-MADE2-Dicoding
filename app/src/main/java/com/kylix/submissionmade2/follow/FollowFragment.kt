@@ -99,7 +99,7 @@ class FollowFragment : Fragment(), ShowState {
                                 , favoriteFragmentBinding: FavoriteFragmentBinding?) {
         followFragmentBinding?.apply {
             errLayout.mainNotFound.visibility = View.GONE
-            progress.stop()
+            progress.visibility = View.GONE
             recylerFollow.visibility = View.VISIBLE
         }
     }
@@ -109,8 +109,7 @@ class FollowFragment : Fragment(), ShowState {
                                 favoriteFragmentBinding: FavoriteFragmentBinding?) {
         followFragmentBinding?.apply {
             errLayout.mainNotFound.visibility = View.GONE
-            progress.start()
-            progress.loadingColor = R.color.colorAccent
+            progress.visibility = View.VISIBLE
             recylerFollow.visibility = View.GONE
         }
     }
@@ -124,7 +123,7 @@ class FollowFragment : Fragment(), ShowState {
                 mainNotFound.visibility = View.VISIBLE
                 emptyText.text = message ?: resources.getString(R.string.not_found)
             }
-            progress.stop()
+            progress.visibility = View.GONE
             recylerFollow.visibility = View.GONE
         }
     }

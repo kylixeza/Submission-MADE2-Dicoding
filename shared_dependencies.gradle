@@ -38,7 +38,10 @@ dependencies {
     implementation "org.koin:koin-android-viewmodel:$koin_version"
 
     //LeakCanary
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.4'
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakcanary_version"
+
+    //Lottie
+    implementation "com.airbnb.android:lottie:$lottie_version"
 
     //Custom UI
     implementation "com.github.Shashank02051997:FancyToast-Android:$fancy_toast_version"

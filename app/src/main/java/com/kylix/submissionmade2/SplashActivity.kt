@@ -23,11 +23,7 @@ class SplashActivity : AppCompatActivity() {
         val splashHandler = Handler(mainLooper)
 
         splashBinding.buildVersion.text = VERSION
-        splashBinding.progress.start()
-        splashBinding.progress.loadingColor = R.color.colorAccent
-
         splashHandler.postDelayed({
-            splashBinding.progress.stop()
             val intent = Intent(this@SplashActivity, MainActivity::class.java)
             startActivity(intent)
             finish()

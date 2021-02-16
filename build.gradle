@@ -44,6 +44,12 @@ buildscript {
         sqlciper_version = "4.4.0"
         sqlite_version = "2.1.0"
 
+        //LeakCanary
+        leakcanary_version = "2.4"
+
+        //Lottie
+        lottie_version = "3.4.1"
+
         //Custom UI
         fancy_toast_version = "0.1.8"
         victor_rotate_loading_version = "1.0.4"
