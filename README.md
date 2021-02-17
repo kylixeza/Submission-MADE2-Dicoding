@@ -17,5 +17,7 @@ Submission MADE(Menjadi Android Developer Expert) ke 2(final) Dicoding
 
 <p>Rating -> :star: :star: :star: :star: :star:</p>
 
+<p>Fun Fact: This project was the next level of BFAA submission with the different architecture :smile: </p>
+
 <p>Help me to finish my college :)</p>
 https://saweria.co/kylixeza
